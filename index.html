@@ -14,7 +14,7 @@
     <meta property="og:image" content="https://restoredbyrandi.com/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Google Analytics — replace GA_MEASUREMENT_ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -54,17 +54,9 @@
           "areaServed": "US",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0",
-              "currency": "USD"
-            },
+            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
             "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
-            "freeShippingThreshold": {
-              "@type": "MonetaryAmount",
-              "value": "100",
-              "currency": "USD"
-            }
+            "freeShippingThreshold": { "@type": "MonetaryAmount", "value": "100", "currency": "USD" }
           },
           "sameAs": [
             "https://www.facebook.com/restoredbyrandi",
@@ -74,7 +66,7 @@
         {
           "@type": "Product",
           "name": "Silicone Breast Prosthesis",
-          "description": "Natural-feeling silicone breast forms available in a wide range of shapes, sizes, and skin tones. Order online with our sizing guide.",
+          "description": "Natural-feeling silicone breast forms available in a wide range of shapes, sizes, and skin tones.",
           "brand": "Restored by Randi",
           "offers": { "@type": "AggregateOffer", "lowPrice": "150", "highPrice": "450", "priceCurrency": "USD" }
         },
@@ -134,54 +126,72 @@
 
     <style>
         :root {
-            --black: #0A0A0A;
-            --charcoal: #1A1A1A;
-            --dark-gray: #2A2A2A;
-            --silver: #C0C0C0;
-            --silver-light: #E0E0E0;
-            --white: #FFFFFF;
-            --text: #E8E8E8;
-            --text-muted: #A0A0A0;
+            --primary: #E8497F;
+            --primary-dark: #D13A6B;
+            --secondary: #F7C5CC;
+            --accent-teal: #2ABFBF;
+            --accent-gold: #D4A574;
+            --bg-warm: #FFF5F5;
+            --bg-white: #FFFFFF;
+            --text-dark: #2D2D2D;
+            --text-medium: #555555;
+            --text-light: #888888;
+            --card-shadow: 0 4px 20px rgba(232, 73, 127, 0.08);
+            --card-shadow-hover: 0 12px 40px rgba(232, 73, 127, 0.15);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Montserrat', sans-serif;
-            color: var(--text);
-            background: var(--black);
+            color: var(--text-dark);
+            background: var(--bg-white);
             line-height: 1.7;
         }
 
-        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
 
         .container { max-width: 1000px; margin: 0 auto; }
         .container-wide { max-width: 1200px; margin: 0 auto; }
 
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--primary), #F06292);
+            color: white;
+            text-align: center;
+            padding: 0.7rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        .promo-banner span { font-weight: 700; }
+
         /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: rgba(10,10,10,0.95); backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--dark-gray);
-            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(232,73,127,0.1);
+            padding: 0.8rem 2rem;
             display: flex; justify-content: space-between; align-items: center;
+            transition: box-shadow 0.3s ease;
         }
-        nav .nav-logo { height: 40px; }
-        nav .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+        nav.scrolled { box-shadow: 0 2px 20px rgba(232,73,127,0.1); }
+        nav .nav-logo { height: 42px; }
+        nav .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
         nav .nav-links a {
-            color: var(--text-muted); text-decoration: none; font-size: 0.8rem;
-            text-transform: uppercase; letter-spacing: 0.15em; font-weight: 400;
+            color: var(--text-medium); text-decoration: none; font-size: 0.78rem;
+            text-transform: uppercase; letter-spacing: 0.12em; font-weight: 500;
             transition: color 0.3s;
         }
-        nav .nav-links a:hover { color: var(--white); }
-        .nav-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+        nav .nav-links a:hover { color: var(--primary); }
+        .nav-toggle { display: none; background: none; border: none; color: var(--primary); font-size: 1.5rem; cursor: pointer; }
 
         @media (max-width: 768px) {
             .nav-toggle { display: block; }
             nav .nav-links {
                 display: none; flex-direction: column; position: absolute;
-                top: 100%; left: 0; right: 0; background: var(--black);
-                padding: 1rem 2rem; gap: 1rem; border-bottom: 1px solid var(--dark-gray);
+                top: 100%; left: 0; right: 0; background: white;
+                padding: 1rem 2rem; gap: 1rem; border-bottom: 1px solid var(--secondary);
             }
             nav .nav-links.open { display: flex; }
         }
@@ -189,46 +199,78 @@
         /* Hero */
         .hero {
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            text-align: center; padding: 6rem 2rem 2rem; background: var(--black);
+            text-align: center; padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, #FFF5F5 0%, #FCE4EC 25%, #F8BBD0 50%, #F48FB1 75%, #F06292 100%);
+            position: relative; overflow: hidden;
         }
-        .hero-content { max-width: 800px; animation: fadeIn 1s ease-out; }
-        .logo { max-width: 450px; width: 90%; margin-bottom: 2.5rem; }
-        .hero .tagline { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 300; font-style: italic; }
-        .hero .sub-tagline { font-size: 0.95rem; color: var(--silver); margin-bottom: 2.5rem; font-weight: 300; }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(42,191,191,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(212,165,116,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content { max-width: 800px; animation: fadeIn 1s ease-out; position: relative; z-index: 1; }
+        .logo { max-width: 400px; width: 80%; margin-bottom: 2rem; }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem); color: var(--text-dark);
+            margin-bottom: 1rem; font-weight: 700; line-height: 1.15;
+        }
+        .hero h1 span { color: var(--primary); }
+        .hero .tagline {
+            font-size: 1.15rem; color: var(--text-medium); margin-bottom: 2.5rem;
+            font-weight: 300; max-width: 550px; margin-left: auto; margin-right: auto;
+        }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
         .cta-button {
-            display: inline-block; background: var(--white); color: var(--black);
-            padding: 1rem 2.5rem; text-decoration: none; font-weight: 500;
-            letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.85rem;
-            transition: all 0.3s ease; border: 1px solid var(--white);
+            display: inline-block; background: var(--primary); color: white;
+            padding: 1rem 2.5rem; text-decoration: none; font-weight: 600;
+            letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.82rem;
+            border-radius: 50px; transition: all 0.3s ease; border: 2px solid var(--primary);
         }
-        .cta-button:hover { background: var(--silver); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,0.1); }
-        .cta-button.secondary { background: transparent; border: 1px solid var(--silver); color: var(--silver); margin-left: 1rem; }
-        .cta-button.secondary:hover { background: var(--silver); color: var(--black); }
+        .cta-button:hover { background: var(--primary-dark); border-color: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(232,73,127,0.3); }
+        .cta-button.secondary { background: white; border: 2px solid var(--primary); color: var(--primary); }
+        .cta-button.secondary:hover { background: var(--primary); color: white; }
+        .cta-button.teal { background: var(--accent-teal); border-color: var(--accent-teal); }
+        .cta-button.teal:hover { background: #1FA8A8; border-color: #1FA8A8; }
         @media (max-width: 500px) {
-            .cta-button.secondary { margin-left: 0; margin-top: 1rem; display: block; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .cta-button { width: 100%; text-align: center; }
         }
 
         /* Section shared */
-        .section-dark { padding: 6rem 2rem; background: var(--black); }
-        .section-alt { padding: 6rem 2rem; background: var(--charcoal); }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--white); }
-        .section-intro { text-align: center; max-width: 650px; margin: 0 auto 3rem; color: var(--text-muted); }
+        .section-warm { padding: 6rem 2rem; background: var(--bg-warm); }
+        .section-white { padding: 6rem 2rem; background: var(--bg-white); }
+        .section-title {
+            text-align: center; font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 0.75rem; color: var(--text-dark); font-weight: 700;
+        }
+        .section-title span { color: var(--primary); }
+        .section-intro { text-align: center; max-width: 600px; margin: 0 auto 3rem; color: var(--text-medium); font-size: 1.05rem; }
 
         /* About */
         .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
         @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
         .about-image {
-            width: 100%; height: 450px; background: var(--dark-gray);
+            width: 100%; height: 450px; background: linear-gradient(135deg, var(--secondary), #F8BBD0);
             display: flex; align-items: center; justify-content: center; font-size: 4rem;
-            overflow: hidden; border: 1px solid var(--dark-gray);
+            overflow: hidden; border-radius: 16px; box-shadow: var(--card-shadow);
         }
         .about-image img { width: 100%; height: 100%; object-fit: cover; }
-        .about-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--white); }
-        .about-content h2 span { color: var(--silver); }
-        .about-content p { margin-bottom: 1rem; color: var(--text-muted); }
-        .credentials { margin-top: 2rem; padding: 1.5rem; background: var(--dark-gray); border-left: 2px solid var(--silver); }
-        .credentials h4 { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--silver); margin-bottom: 0.5rem; }
-        .credentials p { font-weight: 400; color: var(--text); margin: 0; }
+        .about-content h2 { font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--text-dark); font-weight: 700; }
+        .about-content h2 span { color: var(--primary); }
+        .about-content p { margin-bottom: 1rem; color: var(--text-medium); }
+        .credentials {
+            margin-top: 2rem; padding: 1.5rem; background: white;
+            border-left: 3px solid var(--primary); border-radius: 0 12px 12px 0;
+            box-shadow: var(--card-shadow);
+        }
+        .credentials h4 { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--primary); margin-bottom: 0.5rem; }
+        .credentials p { font-weight: 400; color: var(--text-dark); margin: 0; }
 
         /* How It Works */
         .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
@@ -236,175 +278,233 @@
         @media (max-width: 480px) { .steps-grid { grid-template-columns: 1fr; } }
         .step-item { padding: 1.5rem; }
         .step-number {
-            width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--silver);
+            width: 64px; height: 64px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), #F06292);
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 1rem; font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem; color: var(--white);
+            font-size: 1.5rem; color: white; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(232,73,127,0.3);
         }
-        .step-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--white); }
-        .step-item p { color: var(--text-muted); font-size: 0.9rem; }
+        .step-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text-dark); }
+        .step-item p { color: var(--text-medium); font-size: 0.9rem; }
 
         /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 2rem; }
         .service-card {
-            background: var(--charcoal); padding: 2.5rem; text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--dark-gray);
+            background: white; padding: 2.5rem; text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 16px; box-shadow: var(--card-shadow);
         }
-        .service-card:hover { transform: translateY(-5px); border-color: var(--silver); }
+        .service-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); }
         .service-icon {
-            width: 70px; height: 70px; background: var(--dark-gray); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, var(--secondary), #FCE4EC);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
             margin: 0 auto 1.5rem; font-size: 1.8rem;
         }
-        .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--white); }
-        .service-card p { color: var(--text-muted); font-size: 0.95rem; }
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-dark); }
+        .service-card p { color: var(--text-medium); font-size: 0.95rem; }
 
         /* Product Cards (Shop) */
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 2rem; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 2rem; }
         .product-card {
-            background: var(--charcoal); border: 1px solid var(--dark-gray);
-            overflow: hidden; transition: transform 0.3s, border-color 0.3s;
+            background: white; border-radius: 16px; overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--card-shadow); position: relative;
         }
-        .product-card:hover { transform: translateY(-4px); border-color: var(--silver); }
+        .product-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); }
+        .product-card:hover .product-img img { transform: scale(1.08); }
+        .product-badge {
+            position: absolute; top: 12px; left: 12px; z-index: 2;
+            background: var(--primary); color: white; font-size: 0.7rem;
+            font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 20px;
+            text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .product-badge.teal { background: var(--accent-teal); }
         .product-img {
-            height: 220px; background: var(--dark-gray); display: flex;
-            align-items: center; justify-content: center; font-size: 3rem; color: var(--text-muted);
+            height: 240px; overflow: hidden; background: linear-gradient(135deg, #FFF0F3, #FCE4EC);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .product-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.4s ease;
         }
         .product-info { padding: 1.5rem; }
-        .product-info h3 { font-size: 1.3rem; color: var(--white); margin-bottom: 0.5rem; }
-        .product-info .price { color: var(--silver); font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .product-info .price-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; }
-        .product-info p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
-        .product-info .cta-button { padding: 0.7rem 1.5rem; font-size: 0.75rem; width: 100%; text-align: center; }
+        .product-info h3 { font-size: 1.15rem; color: var(--text-dark); margin-bottom: 0.4rem; font-weight: 600; }
+        .product-info .price { color: var(--primary); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .product-info .price-note { font-size: 0.78rem; color: var(--text-light); margin-bottom: 1rem; }
+        .product-info p { color: var(--text-medium); font-size: 0.88rem; margin-bottom: 1.25rem; }
+        .product-info .cta-button { padding: 0.7rem 1.5rem; font-size: 0.75rem; width: 100%; text-align: center; display: block; }
+
+        /* Virtual Fitting CTA */
+        .fitting-cta {
+            background: linear-gradient(135deg, var(--accent-teal), #26A69A);
+            padding: 4rem 2rem; text-align: center; color: white;
+        }
+        .fitting-cta h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 1rem; color: white; }
+        .fitting-cta p { max-width: 550px; margin: 0 auto 2rem; font-size: 1.05rem; opacity: 0.95; }
+        .fitting-cta .cta-button { background: white; color: var(--accent-teal); border-color: white; font-size: 0.9rem; padding: 1.1rem 3rem; }
+        .fitting-cta .cta-button:hover { background: #F0F0F0; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
 
         /* Sizing Guide */
         .sizing-steps { max-width: 700px; margin: 0 auto; }
         .sizing-step { display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start; }
         .sizing-step-num {
-            min-width: 40px; height: 40px; border-radius: 50%; background: var(--dark-gray);
-            border: 1px solid var(--silver); display: flex; align-items: center; justify-content: center;
-            font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white);
+            min-width: 44px; height: 44px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), #F06292);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: white; font-weight: 700;
         }
-        .sizing-step-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
-        .sizing-step-content p { color: var(--text-muted); font-size: 0.9rem; }
+        .sizing-step-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.3rem; }
+        .sizing-step-content p { color: var(--text-medium); font-size: 0.9rem; }
 
         /* Values Grid */
         .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2rem; }
         .value-item { text-align: center; padding: 1.5rem; }
         .value-item .icon {
-            width: 60px; height: 60px; background: var(--dark-gray); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 1rem; font-size: 1.5rem; border: 1px solid var(--silver);
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, var(--secondary), #FCE4EC);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1rem; font-size: 1.5rem;
         }
-        .value-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--white); }
-        .value-item p { color: var(--text-muted); font-size: 0.9rem; }
+        .value-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text-dark); }
+        .value-item p { color: var(--text-medium); font-size: 0.9rem; }
 
         /* Testimonials */
-        .testimonial {
-            padding: 6rem 2rem; background: var(--black); color: var(--white);
-            text-align: center; border-top: 1px solid var(--dark-gray); border-bottom: 1px solid var(--dark-gray);
+        .testimonials-section { padding: 6rem 2rem; background: linear-gradient(135deg, #FFF5F5, #FCE4EC); }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+        .testimonial-card {
+            background: white; padding: 2rem; border-radius: 16px;
+            box-shadow: var(--card-shadow); text-align: left;
         }
-        .testimonial .icon { font-size: 2rem; margin-bottom: 1.5rem; color: var(--silver); }
-        .testimonial blockquote {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem,2.5vw,1.8rem);
-            max-width: 800px; margin: 0 auto 1rem; font-style: italic; line-height: 1.6; color: var(--text);
+        .testimonial-card:hover { box-shadow: var(--card-shadow-hover); }
+        .stars { color: #F9A825; letter-spacing: 2px; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .testimonial-card blockquote {
+            font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
+            color: var(--text-dark); font-style: italic; line-height: 1.6; margin-bottom: 1rem;
         }
-        .testimonial cite { font-style: normal; font-size: 0.9rem; color: var(--text-muted); display: block; margin-bottom: 2.5rem; }
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
-        .testimonial-card { background: var(--charcoal); padding: 2rem; border: 1px solid var(--dark-gray); text-align: left; }
-        .testimonial-card blockquote { font-size: 1.1rem; text-align: left; margin-bottom: 1rem; }
-        .testimonial-card cite { text-align: left; }
-        .stars { color: var(--silver); letter-spacing: 2px; margin-bottom: 0.75rem; }
+        .testimonial-card cite { font-style: normal; font-size: 0.85rem; color: var(--primary); display: block; font-weight: 600; }
 
         /* Shipping Banner */
         .shipping-banner {
-            background: var(--dark-gray); padding: 3rem 2rem; text-align: center;
-            border-top: 1px solid var(--silver); border-bottom: 1px solid var(--silver);
+            background: white; padding: 3.5rem 2rem; text-align: center;
+            border-top: 2px solid var(--secondary); border-bottom: 2px solid var(--secondary);
         }
         .shipping-features { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 1.5rem; }
         .shipping-feature { text-align: center; }
-        .shipping-feature .feat-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-        .shipping-feature h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.25rem; }
-        .shipping-feature p { color: var(--text-muted); font-size: 0.85rem; }
+        .shipping-feature .feat-icon { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .shipping-feature h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0.25rem; }
+        .shipping-feature p { color: var(--text-medium); font-size: 0.85rem; }
 
         /* FAQ */
         .faq-list { max-width: 750px; margin: 0 auto; }
-        .faq-item { border-bottom: 1px solid var(--dark-gray); }
+        .faq-item { border-bottom: 1px solid var(--secondary); }
         .faq-question {
             width: 100%; padding: 1.25rem 0; background: none; border: none;
-            color: var(--white); font-family: 'Cormorant Garamond', serif;
+            color: var(--text-dark); font-family: 'Cormorant Garamond', serif;
             font-size: 1.25rem; text-align: left; cursor: pointer;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--silver); transition: transform 0.3s; }
+        .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--primary); transition: transform 0.3s; }
         .faq-question.active::after { transform: rotate(45deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .faq-answer p { padding: 0 0 1.25rem; color: var(--text-muted); font-size: 0.95rem; }
+        .faq-answer p { padding: 0 0 1.25rem; color: var(--text-medium); font-size: 0.95rem; }
 
         /* Virtual Consultation */
         .consult-box {
-            max-width: 700px; margin: 0 auto; background: var(--dark-gray);
-            padding: 3rem; text-align: center; border: 1px solid var(--silver);
+            max-width: 700px; margin: 0 auto; background: white;
+            padding: 3rem; text-align: center; border-radius: 20px;
+            box-shadow: 0 8px 40px rgba(232,73,127,0.12);
+            border: 2px solid var(--secondary);
         }
-        .consult-box h3 { font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; }
-        .consult-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .consult-box h3 { font-size: 1.8rem; color: var(--text-dark); margin-bottom: 1rem; }
+        .consult-box p { color: var(--text-medium); margin-bottom: 1.5rem; }
         .consult-options { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-        .consult-option { display: flex; align-items: center; gap: 0.5rem; color: var(--text); font-size: 0.95rem; }
+        .consult-option { display: flex; align-items: center; gap: 0.5rem; color: var(--text-dark); font-size: 0.95rem; font-weight: 500; }
 
         /* Email Signup */
+        .signup-section { padding: 5rem 2rem; background: linear-gradient(135deg, var(--primary), #F06292); text-align: center; }
+        .signup-section h2 { color: white; }
+        .signup-section .section-intro { color: rgba(255,255,255,0.9); }
         .signup-form {
             max-width: 500px; margin: 0 auto; display: flex; gap: 0.5rem;
         }
         .signup-form input[type="email"] {
-            flex: 1; padding: 1rem; background: var(--dark-gray); border: 1px solid var(--silver);
-            color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.9rem;
+            flex: 1; padding: 1rem; background: white; border: none;
+            color: var(--text-dark); font-family: 'Montserrat', sans-serif; font-size: 0.9rem;
+            border-radius: 50px 0 0 50px;
         }
-        .signup-form input::placeholder { color: var(--text-muted); }
+        .signup-form input::placeholder { color: var(--text-light); }
         .signup-form button {
-            padding: 1rem 1.5rem; background: var(--white); color: var(--black);
-            border: none; font-family: 'Montserrat', sans-serif; font-weight: 500;
+            padding: 1rem 2rem; background: var(--text-dark); color: white;
+            border: none; font-family: 'Montserrat', sans-serif; font-weight: 600;
             text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s; border-radius: 0 50px 50px 0;
         }
-        .signup-form button:hover { background: var(--silver); }
-        @media (max-width: 500px) { .signup-form { flex-direction: column; } }
+        .signup-form button:hover { background: #1a1a1a; }
+        @media (max-width: 500px) {
+            .signup-form { flex-direction: column; }
+            .signup-form input[type="email"] { border-radius: 50px; }
+            .signup-form button { border-radius: 50px; }
+        }
 
         /* Resources */
-        .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
-        .resource-card { background: var(--dark-gray); padding: 2rem; border: 1px solid var(--dark-gray); transition: border-color 0.3s; }
-        .resource-card:hover { border-color: var(--silver); }
-        .resource-card h3 { font-size: 1.3rem; color: var(--white); margin-bottom: 0.75rem; }
-        .resource-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
-        .resource-card a { color: var(--silver); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        .resource-card a:hover { color: var(--white); }
+        .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 2rem; }
+        .resource-card {
+            background: white; padding: 2rem; border-radius: 16px;
+            box-shadow: var(--card-shadow); transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .resource-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+        .resource-card h3 { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 0.75rem; }
+        .resource-card p { color: var(--text-medium); font-size: 0.9rem; margin-bottom: 1rem; }
+        .resource-card a { color: var(--primary); text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; }
+        .resource-card a:hover { color: var(--primary-dark); }
 
         /* Blog */
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
-        .blog-card { background: var(--charcoal); border: 1px solid var(--dark-gray); overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
-        .blog-card:hover { transform: translateY(-3px); border-color: var(--silver); }
-        .blog-thumb { height: 180px; background: var(--dark-gray); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--text-muted); }
+        .blog-card {
+            background: white; border-radius: 16px; overflow: hidden;
+            box-shadow: var(--card-shadow); transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+        .blog-thumb {
+            height: 180px; background: linear-gradient(135deg, var(--secondary), #F8BBD0);
+            display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+        }
         .blog-card .blog-content { padding: 1.5rem; }
-        .blog-card .blog-content .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--silver); margin-bottom: 0.5rem; }
-        .blog-card .blog-content h3 { font-size: 1.2rem; color: var(--white); margin-bottom: 0.5rem; }
-        .blog-card .blog-content p { color: var(--text-muted); font-size: 0.9rem; }
+        .blog-card .blog-content .tag {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em;
+            color: var(--primary); margin-bottom: 0.5rem; font-weight: 600;
+        }
+        .blog-card .blog-content h3 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+        .blog-card .blog-content p { color: var(--text-medium); font-size: 0.9rem; }
 
         /* Contact */
         .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; margin-bottom: 2.5rem; }
-        .contact-item { display: flex; align-items: center; gap: 0.75rem; color: var(--text); font-size: 1.05rem; }
-        .contact-item a { color: var(--silver); text-decoration: none; }
-        .contact-item a:hover { color: var(--white); }
+        .contact-item { display: flex; align-items: center; gap: 0.75rem; color: var(--text-dark); font-size: 1.05rem; }
+        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .contact-item a:hover { color: var(--primary-dark); }
 
         /* Footer */
-        footer { padding: 2.5rem 2rem; background: var(--black); color: var(--text-muted); text-align: center; font-size: 0.85rem; border-top: 1px solid var(--dark-gray); }
+        footer {
+            padding: 3rem 2rem; background: linear-gradient(135deg, #FFF5F5, #FCE4EC);
+            color: var(--text-medium); text-align: center; font-size: 0.85rem;
+        }
         footer .logo-small { max-width: 200px; margin-bottom: 1rem; }
-        footer a { color: var(--silver); }
+        footer a { color: var(--primary); }
         footer .footer-links { margin: 1rem 0; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-        footer .footer-links a { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; }
+        footer .footer-links a { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; color: var(--text-medium); font-weight: 500; }
+        footer .footer-links a:hover { color: var(--primary); }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        🎀 <span>Free Shipping</span> on Orders Over $100 — Shipped Discreetly to Your Door ✨
+    </div>
 
     <!-- Navigation -->
     <nav>
@@ -426,18 +526,20 @@
     <section class="hero">
         <div class="hero-content">
             <img src="logo.jpg" alt="Restored by Randi - Compassionate Mastectomy Boutique" class="logo">
-            <p class="tagline">Your journey to feeling whole again starts here</p>
-            <p class="sub-tagline">Breast prostheses, bras & swimwear — shipped with care to your door. Free shipping over $100.</p>
-            <a href="#virtual-fitting" class="cta-button" onclick="event.preventDefault(); openFittingQuiz();">Find Your Perfect Fit</a>
-            <a href="#shop" class="cta-button secondary">Shop Now</a>
-            <a href="#consult" class="cta-button secondary" style="margin-left: 0; margin-top: 1rem;">Free Virtual Consultation</a>
+            <h1>Confidence, <span>Restored</span>.</h1>
+            <p class="tagline">Premium breast prostheses, bras & swimwear — curated with love, shipped with care. Because you deserve to feel beautiful.</p>
+            <div class="hero-buttons">
+                <a href="#virtual-fitting" class="cta-button" onclick="event.preventDefault(); openFittingQuiz();">✨ Find Your Perfect Fit</a>
+                <a href="#shop" class="cta-button secondary">Shop Collection</a>
+                <a href="#consult" class="cta-button teal">Free Virtual Consultation</a>
+            </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="section-alt" id="how-it-works">
+    <section class="section-white" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title">How It <span>Works</span></h2>
             <p class="section-intro">Getting the right fit from home is simple. We're with you every step of the way.</p>
             <div class="steps-grid">
                 <div class="step-item">
@@ -465,7 +567,7 @@
     </section>
 
     <!-- About -->
-    <section class="section-dark" id="about">
+    <section class="section-warm" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
@@ -487,9 +589,9 @@
     </section>
 
     <!-- What We Offer -->
-    <section class="section-alt" id="services">
+    <section class="section-white" id="services">
         <div class="container">
-            <h2 class="section-title">What We Offer</h2>
+            <h2 class="section-title">What We <span>Offer</span></h2>
             <p class="section-intro">Expert-selected products and personalized guidance, all from the comfort of your home.</p>
             <div class="services-grid">
                 <div class="service-card">
@@ -516,59 +618,187 @@
         </div>
     </section>
 
+    <!-- Virtual Fitting CTA -->
+    <section class="fitting-cta" id="virtual-fitting">
+        <h2>Not Sure Where to Start?</h2>
+        <p>Take our quick virtual fitting quiz and get personalized product recommendations in under 2 minutes.</p>
+        <a href="#" class="cta-button" onclick="event.preventDefault(); openFittingQuiz();">🎯 Take the Fitting Quiz</a>
+    </section>
+
     <!-- Shop -->
-    <section class="section-dark" id="shop">
+    <section class="section-warm" id="shop">
         <div class="container-wide" style="padding: 0 2rem;">
-            <h2 class="section-title">Shop Our Collection</h2>
+            <h2 class="section-title">Shop Our <span>Collection</span></h2>
             <p class="section-intro">Quality products to help you feel confident every day. Shipped discreetly to your door.</p>
             <div class="products-grid">
+
                 <div class="product-card">
-                    <div class="product-img">✦</div>
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFE4E1/E8497F?text=Essential+Light" alt="Amoena Essential Light 2S Breast Form">
+                    </div>
                     <div class="product-info">
-                        <h3>Silicone Breast Prostheses</h3>
-                        <div class="price">$150 – $450</div>
+                        <h3>Amoena Essential Light 2S Breast Form</h3>
+                        <div class="price">$189</div>
                         <div class="price-note">May be eligible for insurance reimbursement</div>
-                        <p>Full-weight silicone forms with natural movement and warmth. Available in a wide range of shapes, sizes, and skin tones.</p>
-                        <a href="https://buy.stripe.com/PLACEHOLDER_PROSTHESES" class="cta-button">Order Now</a>
+                        <p>Ultra-lightweight silicone form with natural movement. Perfect for everyday comfort.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_ESSENTIAL" class="cta-button">Order Now</a>
                     </div>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-img">♡</div>
+                    <div class="product-badge">Most Popular</div>
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF0F5/E8497F?text=Contact+Multi" alt="Amoena Contact Multi 2S Breast Form">
+                    </div>
                     <div class="product-info">
-                        <h3>Post-Mastectomy Bras</h3>
-                        <div class="price">$45 – $85</div>
-                        <div class="price-note">Save when you buy 3+</div>
-                        <p>Pocketed bras in everyday, sports, and lace styles. Comfort, support, and confidence in every design.</p>
-                        <a href="https://buy.stripe.com/PLACEHOLDER_BRAS" class="cta-button">Order Now</a>
+                        <h3>Amoena Contact Multi 2S Breast Form</h3>
+                        <div class="price">$349</div>
+                        <div class="price-note">Premium multi-function adhesive form</div>
+                        <p>Advanced adhesive breast form that attaches directly to the chest wall. Unmatched freedom of movement.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_CONTACT" class="cta-button">Order Now</a>
                     </div>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-img">◇</div>
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF5EE/D4A574?text=Isabel+Camisole" alt="Amoena Isabel Camisole Bra">
+                    </div>
                     <div class="product-info">
-                        <h3>Mastectomy Swimwear</h3>
-                        <div class="price">$80 – $150</div>
-                        <div class="price-note">New styles for every season</div>
-                        <p>One-piece and tankini styles with built-in prosthesis pockets. Look beautiful at the beach or pool.</p>
-                        <a href="https://buy.stripe.com/PLACEHOLDER_SWIMWEAR" class="cta-button">Order Now</a>
+                        <h3>Amoena Isabel Camisole Bra</h3>
+                        <div class="price">$62</div>
+                        <div class="price-note">Soft & seamless everyday comfort</div>
+                        <p>Smooth camisole-style bra with built-in pockets. Perfect layering piece for everyday wear.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_ISABEL" class="cta-button">Order Now</a>
                     </div>
                 </div>
+
                 <div class="product-card">
-                    <div class="product-img">☁</div>
+                    <div class="product-badge teal">New Arrival</div>
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF0F5/E8497F?text=Lara+Satin+Lace" alt="Amoena Lara Satin Lace Bra">
+                    </div>
                     <div class="product-info">
-                        <h3>Lightweight Leisure Forms</h3>
-                        <div class="price">$80 – $200</div>
-                        <div class="price-note">Perfect for rest days &amp; sleeping</div>
-                        <p>Ultra-light foam and fiber-fill forms for around the house, sleeping, or when you want a break from your silicone form.</p>
-                        <a href="https://buy.stripe.com/PLACEHOLDER_LEISURE" class="cta-button">Order Now</a>
+                        <h3>Amoena Lara Satin Lace Bra</h3>
+                        <div class="price">$72</div>
+                        <div class="price-note">Beautiful satin & lace design</div>
+                        <p>Elegant satin and lace pocketed bra. Because post-surgery doesn't mean post-style.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_LARA" class="cta-button">Order Now</a>
                     </div>
                 </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/E0F7FA/2ABFBF?text=Key+Largo" alt="Amoena Key Largo Swimsuit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Amoena Key Largo Swimsuit</h3>
+                        <div class="price">$139</div>
+                        <div class="price-note">Built-in prosthesis pockets</div>
+                        <p>Stunning one-piece swimsuit with built-in pockets and tummy control. Dive in with confidence.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_KEYLARGO" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/E0F7FA/2ABFBF?text=Rhodes+Tankini" alt="Amoena Rhodes Tankini Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Amoena Rhodes Tankini Set</h3>
+                        <div class="price">$129</div>
+                        <div class="price-note">Versatile two-piece styling</div>
+                        <p>Flattering tankini with adjustable straps and pocketed inner bra. Mix, match, and enjoy.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_RHODES" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF5EE/D4A574?text=Fiberfill+Form" alt="Lightweight Fiberfill Form">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lightweight Fiberfill Form</h3>
+                        <div class="price">$89</div>
+                        <div class="price-note">Ideal for recovery & rest days</div>
+                        <p>Soft, ultra-light fiberfill form for gentle everyday comfort. Great during recovery.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_FIBERFILL" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF5EE/D4A574?text=Sleep+Shaper" alt="Sleep & Leisure Shaper">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sleep &amp; Leisure Shaper</h3>
+                        <div class="price">$45</div>
+                        <div class="price-note">Comfort while you relax</div>
+                        <p>Featherweight shaper for sleeping and lounging. Finally, comfort around the clock.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_SLEEP" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFE4E1/E8497F?text=Nipple+Set" alt="Silicone Nipple Prosthesis Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Silicone Nipple Prosthesis Set</h3>
+                        <div class="price">$55</div>
+                        <div class="price-note">Natural-looking pair</div>
+                        <p>Realistic, self-adhesive nipple prostheses in multiple skin tones. The finishing touch.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_NIPPLE" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">Premium</div>
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFE4E1/E8497F?text=Adhesive+Form" alt="Adhesive Breast Form">
+                    </div>
+                    <div class="product-info">
+                        <h3>Adhesive Breast Form (stick-on)</h3>
+                        <div class="price">$279</div>
+                        <div class="price-note">Go braless with confidence</div>
+                        <p>Premium adhesive silicone form that attaches directly to your skin. Ultimate freedom.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_ADHESIVE" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF0F5/E8497F?text=Comfort+Bra" alt="Post-Surgery Comfort Bra">
+                    </div>
+                    <div class="product-info">
+                        <h3>Post-Surgery Comfort Bra (front-close)</h3>
+                        <div class="price">$48</div>
+                        <div class="price-note">Easy front-closure design</div>
+                        <p>Soft cotton front-close bra designed for post-surgery recovery. Gentle, supportive, easy to wear.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_COMFORT" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/400x400/FFF0F5/E8497F?text=Sports+Bra" alt="Mastectomy Sports Bra">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mastectomy Sports Bra</h3>
+                        <div class="price">$68</div>
+                        <div class="price-note">High-support active wear</div>
+                        <p>Moisture-wicking sports bra with pocketed support. Stay active, stay confident.</p>
+                        <a href="https://buy.stripe.com/PLACEHOLDER_SPORTS" class="cta-button">Order Now</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Shipping Banner -->
     <section class="shipping-banner">
-        <h2 class="section-title" style="font-size: 2rem;">Shipping & Returns</h2>
+        <h2 class="section-title" style="font-size: 2rem;">Shipping &amp; <span>Returns</span></h2>
         <div class="shipping-features">
             <div class="shipping-feature">
                 <div class="feat-icon">📦</div>
@@ -594,9 +824,9 @@
     </section>
 
     <!-- How to Measure / Sizing Guide -->
-    <section class="section-alt" id="sizing">
+    <section class="section-white" id="sizing">
         <div class="container">
-            <h2 class="section-title">How to Measure at Home</h2>
+            <h2 class="section-title">How to <span>Measure</span> at Home</h2>
             <p class="section-intro">Finding the right fit is easy with our step-by-step guide. All you need is a soft measuring tape and a mirror.</p>
             <div class="sizing-steps">
                 <div class="sizing-step">
@@ -642,9 +872,9 @@
     </section>
 
     <!-- Why Choose -->
-    <section class="section-dark">
+    <section class="section-warm">
         <div class="container">
-            <h2 class="section-title">Why Women Choose Randi</h2>
+            <h2 class="section-title">Why Women Choose <span>Randi</span></h2>
             <p class="section-intro">Every woman deserves to feel seen, heard, and beautifully fitted — wherever she is.</p>
             <div class="values-grid">
                 <div class="value-item">
@@ -672,22 +902,22 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonial" id="reviews">
+    <section class="testimonials-section" id="reviews">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 2.5rem;">What Our Customers Say</h2>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">What Our <span>Customers</span> Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
                     <blockquote>"I was nervous about ordering online, but Randi's virtual consultation made all the difference. She walked me through the measurements and I got a perfect fit on the first try. The packaging was so thoughtful and discreet."</blockquote>
                     <cite>— Sarah M., California</cite>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
                     <blockquote>"For the first time since my surgery, I felt like myself again. Randi truly cares — she followed up after my order to make sure everything was perfect. I've already ordered more bras!"</blockquote>
                     <cite>— Linda T., Texas</cite>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
                     <blockquote>"I live in a rural area with no mastectomy boutique nearby. Finding Restored by Randi online was a blessing. The swimsuit I ordered is gorgeous, and the free shipping was a lovely bonus."</blockquote>
                     <cite>— Karen D., Montana</cite>
                 </div>
@@ -696,9 +926,9 @@
     </section>
 
     <!-- Resources -->
-    <section class="section-alt" id="resources">
+    <section class="section-white" id="resources">
         <div class="container">
-            <h2 class="section-title">Resources & Support</h2>
+            <h2 class="section-title">Resources &amp; <span>Support</span></h2>
             <p class="section-intro">You're not alone. Here are guides and organizations to support you on your journey.</p>
             <div class="resources-grid">
                 <div class="resource-card">
@@ -726,9 +956,9 @@
     </section>
 
     <!-- Blog -->
-    <section class="section-dark" id="blog">
+    <section class="section-warm" id="blog">
         <div class="container">
-            <h2 class="section-title">From Our Blog</h2>
+            <h2 class="section-title">From Our <span>Blog</span></h2>
             <p class="section-intro">Stories, tips, and guidance for life after breast surgery.</p>
             <div class="blog-grid">
                 <div class="blog-card">
@@ -760,9 +990,9 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section-alt" id="faq">
+    <section class="section-white" id="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
             <p class="section-intro">We're here to help you feel informed and empowered.</p>
             <div class="faq-list">
                 <div class="faq-item">
@@ -802,9 +1032,9 @@
     </section>
 
     <!-- Virtual Consultation -->
-    <section class="section-dark" id="consult">
+    <section class="section-warm" id="consult">
         <div class="container">
-            <h2 class="section-title">Free Virtual Consultation</h2>
+            <h2 class="section-title">Free Virtual <span>Consultation</span></h2>
             <p class="section-intro">Not sure what to order? Let Randi help — from the comfort of your home.</p>
             <div class="consult-box">
                 <h3>Book a Free Sizing Call</h3>
@@ -814,7 +1044,7 @@
                     <div class="consult-option">📱 FaceTime</div>
                     <div class="consult-option">📞 Phone Call</div>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Usually 15-30 minutes. Available Monday–Friday, 9am–5pm ET.</p>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Usually 15-30 minutes. Available Monday–Friday, 9am–5pm ET.</p>
                 <a href="mailto:hello@restoredbyrandi.com?subject=Virtual%20Consultation%20Request" class="cta-button">Request a Consultation</a>
                 <!-- Replace with Calendly link when ready:
                 <a href="https://calendly.com/CALENDLY_URL" class="cta-button">Book Your Free Call</a>
@@ -824,29 +1054,29 @@
     </section>
 
     <!-- Email Signup -->
-    <section class="section-alt" id="signup">
+    <section class="signup-section" id="signup">
         <div class="container" style="text-align: center;">
-            <h2 class="section-title">Stay Connected</h2>
+            <h2 class="section-title" style="color: white;">Stay <span style="color: #FFE4E1;">Connected</span></h2>
             <p class="section-intro">Get recovery tips, new product updates, exclusive offers, and words of encouragement delivered to your inbox.</p>
             <form class="signup-form" action="#" method="POST" id="email-signup">
                 <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
                 <button type="submit">Subscribe</button>
             </form>
-            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem;">We respect your privacy. Unsubscribe anytime.</p>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-top: 1rem;">We respect your privacy. Unsubscribe anytime.</p>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="section-dark" id="contact">
+    <section class="section-white" id="contact">
         <div class="container" style="text-align: center;">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">Get in <span>Touch</span></h2>
             <p class="section-intro">Questions about products, sizing, or your order? We're here to help.</p>
             <div class="contact-info">
                 <div class="contact-item">📧 <a href="mailto:hello@restoredbyrandi.com">hello@restoredbyrandi.com</a></div>
                 <div class="contact-item">📞 <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a></div>
                 <div class="contact-item">💬 <a href="sms:+1XXXXXXXXXX">Text Us</a></div>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">We respond within 24 hours, Monday–Friday</p>
+            <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 2rem;">We respond within 24 hours, Monday–Friday</p>
             <a href="mailto:hello@restoredbyrandi.com" class="cta-button">Send Us a Message</a>
         </div>
     </section>
@@ -864,7 +1094,7 @@
             <a href="#contact">Contact</a>
         </div>
         <p style="margin-top: 1rem;">© 2025 Restored by Randi. All rights reserved.</p>
-        <p>Ships nationwide from Florida 🌴</p>
+        <p>Ships nationwide from Florida 🌴 | Made with 💗</p>
     </footer>
 
     <!-- Virtual Fitting Quiz Modal -->
@@ -883,76 +1113,78 @@
         /* Quiz Overlay & Modal */
         .quiz-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2000;
-            background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+            background: rgba(45,45,45,0.7); backdrop-filter: blur(8px);
             display: flex; align-items: center; justify-content: center;
             animation: fadeIn 0.3s ease;
         }
         .quiz-modal {
-            background: var(--charcoal); border: 1px solid var(--dark-gray);
+            background: white; border-radius: 20px;
             width: 95%; max-width: 640px; max-height: 90vh; overflow-y: auto;
             padding: 2.5rem; position: relative; animation: fadeIn 0.4s ease;
+            box-shadow: 0 20px 60px rgba(232,73,127,0.2);
         }
         .quiz-close {
             position: absolute; top: 1rem; right: 1.5rem; background: none; border: none;
-            color: var(--text-muted); font-size: 2rem; cursor: pointer; transition: color 0.3s;
+            color: var(--text-light); font-size: 2rem; cursor: pointer; transition: color 0.3s;
             line-height: 1;
         }
-        .quiz-close:hover { color: var(--white); }
+        .quiz-close:hover { color: var(--primary); }
         .quiz-progress { margin-bottom: 2rem; }
-        .quiz-progress-bar { height: 4px; background: var(--dark-gray); border-radius: 2px; overflow: hidden; }
-        .quiz-progress-fill { height: 100%; background: var(--silver); transition: width 0.4s ease; width: 16.66%; }
-        .quiz-step-label { text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.15em; }
+        .quiz-progress-bar { height: 4px; background: var(--secondary); border-radius: 2px; overflow: hidden; }
+        .quiz-progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), #F06292); transition: width 0.4s ease; width: 16.66%; border-radius: 2px; }
+        .quiz-step-label { text-align: center; font-size: 0.75rem; color: var(--text-light); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.15em; }
         .quiz-body { animation: quizFadeIn 0.3s ease; }
-        .quiz-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); margin-bottom: 0.5rem; }
-        .quiz-body .quiz-subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-style: italic; }
+        .quiz-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+        .quiz-body .quiz-subtitle { color: var(--text-medium); font-size: 0.9rem; margin-bottom: 1.5rem; font-style: italic; }
         .quiz-option {
             display: block; width: 100%; padding: 1rem 1.25rem; margin-bottom: 0.75rem;
-            background: var(--dark-gray); border: 1px solid var(--dark-gray); color: var(--text);
+            background: var(--bg-warm); border: 2px solid transparent; color: var(--text-dark);
             font-family: 'Montserrat', sans-serif; font-size: 0.9rem; text-align: left;
-            cursor: pointer; transition: all 0.2s ease;
+            cursor: pointer; transition: all 0.2s ease; border-radius: 12px;
         }
-        .quiz-option:hover { border-color: var(--silver); background: rgba(192,192,192,0.1); }
-        .quiz-option.selected { border-color: var(--silver); background: rgba(192,192,192,0.15); }
-        .quiz-option small { display: block; color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; }
+        .quiz-option:hover { border-color: var(--secondary); background: #FFF0F3; }
+        .quiz-option.selected { border-color: var(--primary); background: #FFF0F3; }
+        .quiz-option small { display: block; color: var(--text-light); font-size: 0.8rem; margin-top: 0.25rem; }
         .quiz-checkbox {
             display: flex; align-items: center; gap: 0.75rem; padding: 0.85rem 1.25rem;
-            margin-bottom: 0.5rem; background: var(--dark-gray); border: 1px solid var(--dark-gray);
-            cursor: pointer; transition: all 0.2s ease;
+            margin-bottom: 0.5rem; background: var(--bg-warm); border: 2px solid transparent;
+            cursor: pointer; transition: all 0.2s ease; border-radius: 12px;
         }
-        .quiz-checkbox:hover { border-color: var(--silver); }
-        .quiz-checkbox.checked { border-color: var(--silver); background: rgba(192,192,192,0.15); }
+        .quiz-checkbox:hover { border-color: var(--secondary); }
+        .quiz-checkbox.checked { border-color: var(--primary); background: #FFF0F3; }
         .quiz-checkbox input { display: none; }
         .quiz-checkbox .checkmark {
-            width: 20px; height: 20px; border: 1px solid var(--silver); display: flex;
-            align-items: center; justify-content: center; font-size: 0.8rem; color: var(--white); flex-shrink: 0;
+            width: 22px; height: 22px; border: 2px solid var(--secondary); border-radius: 6px; display: flex;
+            align-items: center; justify-content: center; font-size: 0.8rem; color: var(--primary); flex-shrink: 0;
         }
-        .quiz-checkbox.checked .checkmark::after { content: '✓'; }
-        .quiz-checkbox span:last-child { color: var(--text); font-size: 0.9rem; }
+        .quiz-checkbox.checked .checkmark { background: var(--primary); border-color: var(--primary); }
+        .quiz-checkbox.checked .checkmark::after { content: '✓'; color: white; }
+        .quiz-checkbox span:last-child { color: var(--text-dark); font-size: 0.9rem; }
         .quiz-nav { display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem; }
         .quiz-btn {
             padding: 0.85rem 2rem; font-family: 'Montserrat', sans-serif; font-size: 0.8rem;
-            text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; border: 1px solid var(--silver);
-            transition: all 0.3s ease; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer;
+            transition: all 0.3s ease; font-weight: 600; border-radius: 50px;
         }
-        .quiz-btn-back { background: transparent; color: var(--silver); }
-        .quiz-btn-back:hover { background: rgba(192,192,192,0.1); }
-        .quiz-btn-next { background: var(--white); color: var(--black); border-color: var(--white); }
-        .quiz-btn-next:hover { background: var(--silver); }
+        .quiz-btn-back { background: transparent; color: var(--text-medium); border: 2px solid var(--secondary); }
+        .quiz-btn-back:hover { background: var(--bg-warm); }
+        .quiz-btn-next { background: var(--primary); color: white; border: 2px solid var(--primary); }
+        .quiz-btn-next:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
         .quiz-btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
         .quiz-input-group { margin-bottom: 1.25rem; }
-        .quiz-input-group label { display: block; color: var(--text); font-size: 0.85rem; margin-bottom: 0.4rem; }
+        .quiz-input-group label { display: block; color: var(--text-dark); font-size: 0.85rem; margin-bottom: 0.4rem; font-weight: 500; }
         .quiz-input-group input {
-            width: 100%; padding: 0.85rem; background: var(--dark-gray); border: 1px solid var(--dark-gray);
-            color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.95rem;
+            width: 100%; padding: 0.85rem; background: var(--bg-warm); border: 2px solid var(--secondary);
+            color: var(--text-dark); font-family: 'Montserrat', sans-serif; font-size: 0.95rem; border-radius: 10px;
         }
-        .quiz-input-group input:focus { outline: none; border-color: var(--silver); }
-        .quiz-input-group .hint { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; }
+        .quiz-input-group input:focus { outline: none; border-color: var(--primary); }
+        .quiz-input-group .hint { font-size: 0.8rem; color: var(--text-light); margin-top: 0.3rem; }
         .quiz-measure-diagram {
-            background: var(--dark-gray); padding: 1.5rem; margin-bottom: 1.5rem;
-            border: 1px solid var(--dark-gray); text-align: center;
+            background: var(--bg-warm); padding: 1.5rem; margin-bottom: 1.5rem;
+            border: 2px solid var(--secondary); text-align: center; border-radius: 12px;
         }
         .quiz-measure-diagram .diagram-icon { font-size: 3rem; margin-bottom: 0.75rem; }
-        .quiz-measure-diagram p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+        .quiz-measure-diagram p { color: var(--text-medium); font-size: 0.85rem; line-height: 1.6; }
         /* Results */
         .quiz-results { text-align: center; }
         .quiz-results .celebration { font-size: 2.5rem; margin-bottom: 1rem; }
@@ -960,21 +1192,30 @@
         .quiz-result-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; text-align: left; }
         @media (max-width: 500px) { .quiz-result-cards { grid-template-columns: 1fr; } }
         .quiz-result-card {
-            background: var(--dark-gray); padding: 1.25rem; border: 1px solid var(--dark-gray);
+            background: var(--bg-warm); padding: 1.25rem; border-radius: 12px;
+            border: 2px solid var(--secondary);
         }
-        .quiz-result-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.5rem; }
-        .quiz-result-card p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.25rem; }
-        .quiz-result-card .highlight { color: var(--silver); font-weight: 500; font-size: 1rem; }
+        .quiz-result-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+        .quiz-result-card p { color: var(--text-medium); font-size: 0.85rem; margin-bottom: 0.25rem; }
+        .quiz-result-card .highlight { color: var(--primary); font-weight: 600; font-size: 1rem; }
         .quiz-insurance-callout {
-            background: rgba(192,192,192,0.1); border: 1px solid var(--silver); padding: 1.25rem;
-            margin: 1.5rem 0; text-align: center;
+            background: #FFF0F3; border: 2px solid var(--secondary); padding: 1.25rem;
+            margin: 1.5rem 0; text-align: center; border-radius: 12px;
         }
-        .quiz-insurance-callout p { color: var(--text); font-size: 0.9rem; }
-        .quiz-insurance-callout a { color: var(--silver); }
+        .quiz-insurance-callout p { color: var(--text-dark); font-size: 0.9rem; }
+        .quiz-insurance-callout a { color: var(--primary); }
         .quiz-result-actions { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
         .quiz-result-actions .cta-button { min-width: 250px; text-align: center; }
         @keyframes quizFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
+
+    <!-- Sticky Nav Script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+        });
+    </script>
 
     <!-- Quiz Logic -->
     <script>
@@ -998,7 +1239,6 @@
             document.body.style.overflow = '';
         };
 
-        // Close on overlay click
         document.getElementById('fitting-quiz-overlay').addEventListener('click', function(e){
             if(e.target === this) closeFittingQuiz();
         });
@@ -1042,7 +1282,6 @@
                 };
                 body.appendChild(btn);
             });
-            // Still add back button
             const d = document.createElement('div'); d.className = 'quiz-nav';
             if(showBack){
                 const b = document.createElement('button'); b.className='quiz-btn quiz-btn-back'; b.textContent='← Back';
@@ -1054,7 +1293,7 @@
         function step1(body){
             body.innerHTML = `<h2>Let's find your perfect fit together</h2>
                 <p class="quiz-subtitle">Take your time — there's no rush. We'll guide you through each step. 💛</p>
-                <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">What type of surgery did you have?</p>`;
+                <p style="color:var(--text-medium);font-size:0.9rem;margin-bottom:1.5rem;">What type of surgery did you have?</p>`;
             optionList(body, 'surgery', [
                 {value:'full-single', label:'Full mastectomy (one side)'},
                 {value:'full-double', label:'Double mastectomy (both sides)'},
@@ -1101,7 +1340,7 @@
                 const band = document.getElementById('q-bandSize').value;
                 if(!band){ alert('Please enter your band size to continue.'); return; }
                 Q.answers.bandSize = parseInt(band);
-                if(band % 2 !== 0) Q.answers.bandSize = parseInt(band) + 1; // round to even
+                if(band % 2 !== 0) Q.answers.bandSize = parseInt(band) + 1;
                 const cw = document.getElementById('q-chestWidth');
                 if(cw) Q.answers.chestWidth = cw.value;
                 if(isLump){
@@ -1154,27 +1393,22 @@
 
         function step6(body){
             const a = Q.answers;
-            // Calculate prosthesis size
             const band = a.bandSize || 36;
             const frame = a.frame || 'medium';
             const surgery = a.surgery || 'full-single';
             const timing = a.timing || 'over2y';
             const prefs = a.preferences || [];
 
-            // Frame offset
             const frameOffset = frame === 'petite' ? -2 : frame === 'large' ? 2 : 0;
-            // Base size from band
             let baseSize = Math.max(1, Math.min(14, Math.round((band - 28) / 2) + frameOffset));
             if(baseSize < 1) baseSize = 1; if(baseSize > 14) baseSize = 14;
             let sizeMin = Math.max(1, baseSize - 1);
             let sizeMax = Math.min(14, baseSize + 1);
 
-            // Cup calculation
             const cupMap = {1:'A',2:'A',3:'A',4:'B',5:'B',6:'B',7:'C',8:'C',9:'C',10:'D',11:'D',12:'D',13:'DD',14:'DD'};
             const cupSize = cupMap[baseSize] || 'C';
             const braSize = band + cupSize;
 
-            // Product recommendations
             const isEarly = timing === 'under6w';
             const isLump = surgery === 'lumpectomy';
             const isRecon = surgery === 'reconstruction';
@@ -1208,7 +1442,6 @@
                 prosthesisLink = 'https://buy.stripe.com/PLACEHOLDER_PROSTHESES';
             }
 
-            // Extras
             if(!isRecon){
                 extras.push({name:'Post-Mastectomy Bra', price:'$45 – $85', link:'https://buy.stripe.com/PLACEHOLDER_BRAS'});
             }
@@ -1219,11 +1452,11 @@
                 extras.push({name:'Leisure / Sleep Form', price:'$80 – $200', link:'https://buy.stripe.com/PLACEHOLDER_LEISURE'});
             }
 
-            let earlyNote = isEarly ? `<div style="background:rgba(192,192,192,0.08);padding:1rem;margin-bottom:1.25rem;border-left:2px solid var(--silver);text-align:left;">
-                <p style="color:var(--text);font-size:0.9rem;">💛 Since you're less than 6 weeks post-surgery, we recommend starting with a <strong>lightweight fiberfill form</strong>. Silicone forms are best after your incisions have fully healed (usually 6-8 weeks). Be gentle with yourself!</p></div>` : '';
+            let earlyNote = isEarly ? `<div style="background:#FFF0F3;padding:1rem;margin-bottom:1.25rem;border-left:3px solid var(--primary);text-align:left;border-radius:0 12px 12px 0;">
+                <p style="color:var(--text-dark);font-size:0.9rem;">💛 Since you're less than 6 weeks post-surgery, we recommend starting with a <strong>lightweight fiberfill form</strong>. Silicone forms are best after your incisions have fully healed (usually 6-8 weeks). Be gentle with yourself!</p></div>` : '';
 
-            let lumpNote = isLump ? `<div style="background:rgba(192,192,192,0.08);padding:1rem;margin-bottom:1.25rem;border-left:2px solid var(--silver);text-align:left;">
-                <p style="color:var(--text);font-size:0.9rem;">For lumpectomy, a partial shaper or equalizer will beautifully restore symmetry. The right size depends on the volume difference — a virtual consultation can help dial it in perfectly.</p></div>` : '';
+            let lumpNote = isLump ? `<div style="background:#FFF0F3;padding:1rem;margin-bottom:1.25rem;border-left:3px solid var(--primary);text-align:left;border-radius:0 12px 12px 0;">
+                <p style="color:var(--text-dark);font-size:0.9rem;">For lumpectomy, a partial shaper or equalizer will beautifully restore symmetry. The right size depends on the volume difference — a virtual consultation can help dial it in perfectly.</p></div>` : '';
 
             body.innerHTML = `
                 <div class="quiz-results">
