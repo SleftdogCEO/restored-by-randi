@@ -1,46 +1,75 @@
-# Restored by Randi — Business Plan
+# Restored by Randi — Business Plan (E-Commerce Model)
 
 ## Executive Summary
 
-Restored by Randi is a mastectomy fitting boutique in West Palm Beach, FL specializing in breast prostheses, mastectomy bras, swimwear, and accessories. The business serves breast cancer survivors with compassionate, expert fitting services while generating revenue through product sales, insurance reimbursement, and online e-commerce.
+Restored by Randi is an online mastectomy boutique specializing in breast prostheses, mastectomy bras, swimwear, and accessories. The business serves breast cancer survivors nationwide with compassionate, expert guidance through virtual consultations and a curated online shopping experience. All products ship directly to customers' doors.
 
 **Owner:** Randi (Board Certified Mastectomy Fitter, 15+ years experience)
-**Location:** West Palm Beach, FL
+**Model:** Online-only e-commerce, ships nationwide from Florida
 **Target Launch:** Q1 2026
+
+### Why E-Commerce?
+- **Lower overhead** — No retail lease ($1,500–$3,000/month saved)
+- **Nationwide reach** — Serve customers anywhere in the US, not just one metro area
+- **Accessibility** — Many mastectomy patients have limited mobility during recovery
+- **Scalability** — Grow without adding physical locations
+- **Convenience** — Customers shop from home with free virtual consultation support
 
 ---
 
 ## Revenue Streams
 
-### 1. In-Person Fittings + Product Sales (Primary — ~60% of revenue)
-- Private fitting appointments (free consultation; revenue from product sales)
-- Average transaction: $300–$600 (prosthesis + 2 bras)
-- Repeat customers every 1–2 years (prostheses need replacement; bras every 6–12 months)
-- **Target: 8–12 fittings/week = $2,400–$7,200/week**
+### 1. Online Product Sales (Primary — ~60% of revenue)
+- Direct-to-consumer sales via website (Stripe checkout)
+- Average order value: $120–$200
+- Free shipping on orders over $100
+- Easy 30-day returns build trust for first-time buyers
+- **Target: 50 orders/month (Month 1) → 500+ orders/month (Year 2)**
 
-### 2. Insurance Billing (Integrated — adds 20–40% margin lift)
-- Most mastectomy products are covered under the **Women's Health and Cancer Rights Act (WHCRA)**
-- Medicare covers external breast prostheses (L8030, L8020) and up to 6 mastectomy bras/year (A4280)
-- Medicaid (FL) covers prostheses and bras
-- Private insurance: most plans cover with prescription from surgeon/oncologist
-- **HCPCS Codes:**
-  - L8030 — Breast prosthesis, silicone or equal
-  - L8020 — Breast prosthesis, mastectomy bra
-  - A4280 — Adhesive skin support attachment for breast prosthesis
-  - L8015 — External breast prosthesis garment (swimwear)
-- **Typical reimbursement:** $200–$450 per prosthesis, $45–$90 per bra (6/year)
-- **Annual per-patient insurance value: $1,000–$2,000+**
+### 2. Virtual Consultations (Free — drives sales)
+- One-on-one Zoom/FaceTime calls with Randi
+- Help customers with sizing, product selection, and questions
+- Typically 15-30 minutes
+- **Conversion driver** — customers who consult are 3-5x more likely to purchase
+- Builds the personal relationship that sets us apart from Amazon sellers
 
-### 3. Online Product Sales (Growth channel — ~20% of revenue)
-- Ship-to-home for repeat customers who know their size
-- Attract customers outside West Palm Beach area
-- Lower-touch items: leisure forms, bras, accessories
-- **Target: $3,000–$8,000/month within 6 months**
+### 3. Insurance Reimbursement Guidance (Enhances sales, not direct billing)
+- Provide itemized receipts with HCPCS codes
+- Include step-by-step reimbursement guide with every order
+- Help customers submit out-of-network claims
+- **Key insight:** Direct insurance billing typically requires in-person fitting. Instead, we help customers get reimbursed on their own — this removes price sensitivity and differentiates us.
 
-### 4. Workshops & Support Groups (Community + referral engine)
-- Monthly "New Beginnings" support group (free, builds loyalty)
-- Post-surgery care workshops at hospitals/cancer centers
-- Generates referrals and word-of-mouth
+### 4. Affiliate & Content Revenue (Growth channel — ~10% of revenue)
+- Blog content with affiliate links (wigs, skincare, compression, wellness)
+- YouTube channel (sizing guides, recovery tips, product reviews)
+- Digital products (insurance navigation guide, style guide eBooks)
+
+### 5. Wholesale/Group Sales (~15% of revenue)
+- Supply cancer centers and support groups
+- Bulk orders for hospitals and oncology practices
+
+---
+
+## Operations Model
+
+### Fulfillment
+- **Phase 1 (Launch):** Ship from home. Dedicated inventory room/closet.
+- **Phase 2 (100+ orders/month):** Consider 3PL (third-party logistics) like ShipBob, ShipMonk, or Deliverr
+- **Shipping carrier:** USPS Priority Mail (2-3 day delivery, includes tracking)
+- **Shipping labels:** Pirate Ship or Shippo for discounted USPS/UPS rates
+- **Packaging:** Discreet plain boxes with branded tissue paper inside
+
+### Inventory Management
+- **Phase 1:** Spreadsheet tracking (Google Sheets or Airtable)
+- **Phase 2:** Shopify inventory management or dedicated tool
+- **Reorder points:** Set minimum stock levels; reorder when inventory hits threshold
+- **Drop-ship option:** Some brands (Amoena, ABC) offer drop-shipping for overflow
+
+### Customer Service
+- Email: hello@restoredbyrandi.com (respond within 24 hours)
+- Phone/Text: Dedicated business line (Google Voice or similar)
+- Virtual consultations: By appointment, Monday–Friday
+- Live chat: Add Tidio or similar widget once traffic warrants it
 
 ---
 
@@ -55,21 +84,13 @@ Restored by Randi is a mastectomy fitting boutique in West Palm Beach, FL specia
 | **Trulife** | Breast forms, bras, swimwear | https://www.trulife.com/become-a-dealer/ |
 | **Nearly Me** | Breast forms, bras | Contact via distributor (Camp Healthcare) |
 | **Anita Care** | Bras, swimwear | https://www.anita.com/us/specialist-retailers.html |
-| **Elita** | Leisure forms, accessories | Via medical supply distributors |
 
-### Wholesale Terms (Typical)
-- **Minimum opening order:** $500–$2,000 depending on brand
-- **Wholesale discount:** 40–55% off retail
-- **Net 30 terms** after credit approval
-- **Drop-ship available** from some brands (Amoena, ABC)
-
-### Starting Inventory Recommendation (~$5,000–$8,000)
-- 10 silicone breast forms (various sizes) — $1,500
+### Starting Inventory (~$3,500–$5,000 at wholesale)
+- 10 silicone breast forms (best-selling sizes) — $1,500
 - 30 mastectomy bras (range of sizes/styles) — $900
 - 10 swimwear pieces — $400
 - 10 leisure forms — $500
-- Fitting supplies (skin tape, covers, cleaning supplies) — $200
-- **Total initial inventory: ~$3,500–$5,000 at wholesale**
+- Fitting/shipping supplies — $200
 
 ---
 
@@ -80,138 +101,135 @@ Restored by Randi is a mastectomy fitting boutique in West Palm Beach, FL specia
 | Silicone breast forms | $80–$200 | $150–$450 | 45–55% |
 | Mastectomy bras | $22–$40 | $45–$85 | 50–55% |
 | Mastectomy swimwear | $35–$70 | $80–$150 | 50–55% |
-| Leisure forms (lightweight) | $35–$90 | $80–$200 | 50–55% |
-| Accessories (adhesives, covers) | $5–$15 | $12–$35 | 55–60% |
+| Leisure forms | $35–$90 | $80–$200 | 50–55% |
+| Accessories | $5–$15 | $12–$35 | 55–60% |
 
-**Insurance pricing:** Bill at MSRP/manufacturer-suggested retail. Insurance pays allowable amount (usually 80–100% of retail for in-network). Patient responsibility is typically $0–20% copay.
-
----
-
-## Insurance Billing Details
-
-### Requirements to Bill Insurance
-1. **DME Supplier Number** — Register with CMS as a Durable Medical Equipment supplier
-   - Apply at: https://www.cms.gov/Medicare/Provider-Enrollment-and-Certification
-   - Need surety bond ($50,000 for new DME suppliers)
-2. **NPI Number** — National Provider Identifier (free)
-   - Apply at: https://nppes.cms.hhs.gov/
-3. **PTAN** — Provider Transaction Access Number (Medicare enrollment)
-4. **State Medicaid enrollment** — Separate application through FL Medicaid
-5. **Accreditation** — Required for Medicare DME billing
-   - Options: ABC (American Board for Certification), BOC, or The Joint Commission
-   - Cost: $2,000–$5,000; timeline: 3–6 months
-
-### Billing Workflow
-1. Patient brings prescription from surgeon/oncologist
-2. Verify insurance benefits (call or use Availity/Trizetto)
-3. Perform fitting, document medical necessity
-4. Submit claim with HCPCS codes + diagnosis codes (C50.x, Z90.1x)
-5. Collect copay at time of service
-6. Insurance pays in 14–45 days
-
-### Key Insurance Facts
-- **WHCRA (1998)** mandates coverage for mastectomy products by group health plans
-- **Medicare** covers 1 prosthesis/side every 2 years + 6 bras/year
-- **FL Medicaid** covers prostheses under DME
-- **No prior authorization** needed for most mastectomy products
+### Shipping Pricing
+- **Orders over $100:** Free shipping (absorbed — $8–$15 cost)
+- **Orders under $100:** Flat rate $7.95
 
 ---
 
 ## Marketing Plan
 
-### Digital Marketing
+### Digital Marketing (Primary — E-Commerce Focus)
 
-**SEO (Months 1–3)**
-- Target keywords: "mastectomy fitter West Palm Beach," "breast prosthesis fitting near me," "mastectomy bras Palm Beach County"
-- Google Business Profile optimization (photos, hours, reviews)
-- Blog content: "What to Expect at Your First Mastectomy Fitting," "Insurance Coverage for Breast Prostheses in Florida"
-- Schema markup on website (LocalBusiness, MedicalBusiness)
+**SEO (Ongoing)**
+- Target keywords: "buy mastectomy bras online," "breast prosthesis online," "mastectomy swimwear," "how to measure for breast prosthesis"
+- Blog content: sizing guides, insurance reimbursement how-tos, recovery tips
+- Schema markup (Product, FAQ, OnlineStore)
 
 **Google Ads ($500–$1,000/month)**
-- Target: "mastectomy fitter near me," "breast prosthesis fitting," "mastectomy bras near me"
-- Geo-target: 30-mile radius of West Palm Beach
-- Expected CPC: $2–$5; Expected conversions: 15–30/month
-- See `marketing/google-ads-keywords.md`
+- Google Shopping ads for product listings
+- Search ads: "buy breast prosthesis online," "mastectomy bras online"
+- Nationwide targeting
+- Expected CPC: $1.50–$4; Expected conversions: 20–50/month
 
 **Social Media**
-- Facebook: Join/post in breast cancer survivor groups (with permission)
-- Instagram: Before/after confidence stories (with consent), product showcases
+- Facebook & Instagram: product photos, customer stories, sizing tips
+- YouTube: measurement tutorials, product reviews, Randi's story
+- Pinterest: product pins, recovery tips (high search intent)
 - See `marketing/social-media-plan.md`
 
-### Referral Partnerships (Highest ROI)
-- **Oncologists & breast surgeons** — Leave brochures, offer to do lunch-and-learns
-- Target practices:
-  - Good Samaritan Medical Center
-  - St. Mary's Medical Center
-  - Palm Beach Cancer Institute
-  - Jupiter Medical Center
-  - Cleveland Clinic Florida (Weston, but serves PBC)
-- **Cancer support organizations:**
-  - American Cancer Society (local chapter)
-  - Susan G. Komen South Florida
-  - Cancer Alliance of Help & Hope
-- **Offer referral cards** with $25 credit for referred patients
+**Email Marketing**
+- Welcome series for new subscribers
+- Post-purchase follow-up (care tips + review request)
+- Reorder reminders (automated based on purchase date)
+- Monthly newsletter (new products, tips, stories)
 
-### Community Marketing
-- Sponsor local breast cancer awareness events
-- Host "Fitting & Fashion" events quarterly
-- Partner with wig shops and lymphedema therapists for cross-referrals
+### Referral Partnerships
+- **Oncologists & breast surgeons** — Provide referral cards and flyers with website URL
+- **Cancer support organizations** — American Cancer Society, Susan G. Komen
+- **Online communities** — Breast cancer survivor Facebook groups, forums
+- **Referral program** — $25 credit for each referred customer who purchases
 
 ---
 
-## Competitive Analysis — West Palm Beach Area
+## Competitive Analysis
 
-### Direct Competitors
+### Direct Online Competitors
 
-| Business | Location | Notes |
-|----------|----------|-------|
-| **A Fitting Experience** | Boca Raton | Established, insurance billing, full product line |
-| **Nordstrom (prosthesis dept)** | Palm Beach Gardens | Limited selection, less personal |
-| **Lady Grace** | Various FL | Chain, less personalized |
-| **TLC Direct** | Online only | No in-person fitting |
+| Business | Notes |
+|----------|-------|
+| **TLC Direct** | Established online retailer, wide selection |
+| **Amoena Direct** | Manufacturer sells direct, brand-limited |
+| **Amazon sellers** | Price competition, no personalized service |
+| **Nordstrom online** | Limited selection, no expert guidance |
 
-### Competitive Advantages
-1. **Personal, private setting** — Not a department store
-2. **15+ years certified fitter experience**
-3. **Insurance billing** — Many competitors don't bill insurance
-4. **Convenient West Palm Beach location** — Competitors concentrated in Boca/Fort Lauderdale
-5. **Online sales** — Serve repeat customers and out-of-area patients
-6. **Compassionate brand** — Emotional connection, not transactional
-
-### Market Size
-- ~280,000 new breast cancer cases/year in US
-- Palm Beach County population: ~1.5 million
-- Estimated local mastectomy patients/year: 800–1,200
-- Average lifetime value per patient: $2,000–$5,000
-- **Addressable local market: $1.6M–$6M/year**
+### Our Competitive Advantages
+1. **Personal, expert guidance** — Virtual consultations with a certified fitter (15+ years)
+2. **Compassionate brand** — Emotional connection, not transactional
+3. **Insurance reimbursement help** — Most online sellers don't offer this
+4. **Curated selection** — Best products from multiple brands, not overwhelming
+5. **Sizing expertise** — Detailed guides + personal help reduces returns
+6. **Community** — Blog, resources, support — we're more than a store
 
 ---
 
 ## Financial Projections
 
 ### Year 1
-- **Revenue:** $120,000–$180,000
-- **COGS (45%):** $54,000–$81,000
-- **Gross profit:** $66,000–$99,000
-- **Operating expenses:** $30,000–$45,000 (rent, insurance, marketing, software)
-- **Net income:** $36,000–$54,000
+- **Revenue:** $56,000–$146,000
+- **COGS (40%):** $22,400–$58,400
+- **Shipping costs (8%):** $4,500–$11,700
+- **Gross profit:** $29,100–$75,900
+- **Operating expenses:** $12,000–$20,000 (marketing, software, insurance)
+- **Net income:** $17,100–$55,900
 
-### Year 2 (with insurance billing + online sales)
-- **Revenue:** $250,000–$400,000
-- **Net income:** $80,000–$150,000
+### Year 2
+- **Revenue:** $155,000–$382,000
+- **Net income:** $40,000–$120,000
 
 ### Year 3
-- **Revenue:** $400,000–$600,000
-- **Net income:** $150,000–$250,000
+- **Revenue:** $319,000–$714,000
+- **Net income:** $80,000–$200,000
 
-### Startup Costs
+### Startup Costs (E-Commerce Model)
 | Item | Cost |
 |------|------|
-| Initial inventory | $5,000–$8,000 |
+| Initial inventory | $3,500–$5,000 |
 | Website + domain | $200 |
 | Business license + LLC | $500 |
-| DME accreditation | $3,000–$5,000 |
-| Surety bond | $500–$1,500/year |
+| Shipping supplies (initial) | $200 |
 | Marketing (first 3 months) | $2,000 |
-| Fitting room setup | $1,000–$3,000 |
-| **Total startup:** | **$12,200–$20,200** |
+| Photography (product photos) | $300–$500 |
+| **Total startup:** | **$6,700–$8,400** |
+
+### Key Advantage vs. Brick-and-Mortar
+| Expense | Brick & Mortar | E-Commerce |
+|---------|---------------|------------|
+| Rent | $18,000–$36,000/yr | $0 |
+| Utilities | $1,800–$3,600/yr | $0 |
+| Fitting room setup | $1,000–$3,000 | $0 |
+| DME accreditation (for Medicare) | $3,000–$5,000 | Not needed |
+| Surety bond | $500–$1,500/yr | Not needed |
+| **Annual savings** | — | **$24,300–$49,100** |
+
+---
+
+## Growth Roadmap
+
+### Phase 1: Launch (Months 1-3)
+- Launch website with Stripe payment links
+- Begin virtual consultations
+- Start Google Ads and social media
+- Ship from home, track inventory in spreadsheet
+- Build email list
+
+### Phase 2: Grow (Months 4-12)
+- Expand product line (compression, lymphedema, post-surgical)
+- Launch YouTube channel with sizing/care content
+- Implement reorder reminder automation
+- Reach 100+ orders/month
+- Launch referral program
+
+### Phase 3: Scale (Year 2-3)
+- Consider 3PL for fulfillment (ShipBob, ShipMonk)
+- Launch private label products (higher margins)
+- Explore Amazon marketplace
+- Subscription box offering
+- Hire part-time help for customer service and shipping
+
+---
+
+*This e-commerce model dramatically reduces startup costs and ongoing overhead while expanding the addressable market from one metro area to the entire United States. Virtual consultations preserve the personal, compassionate touch that defines Restored by Randi.*
