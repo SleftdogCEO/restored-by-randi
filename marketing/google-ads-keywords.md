@@ -76,3 +76,27 @@
 **Headline 2:** Custom Fitting by Certified Expert
 **Headline 3:** West Palm Beach | By Appointment
 **Description:** Silicone breast forms, mastectomy bras, swimwear & more. Personally fitted by a board-certified fitter with 15+ years of compassionate care.
+
+## Compression Garment Keyword Cluster (Priority 1)
+
+| Keyword | Est. CPC | Monthly Searches | Priority |
+|---------|----------|-----------------|----------|
+| compression garments after breast surgery | $2–$5 | 300–700 | ⭐⭐⭐ |
+| post-surgical compression bra | $2–$4 | 500–1,200 | ⭐⭐⭐ |
+| front zip compression vest | $2–$4 | 100–400 | ⭐⭐⭐ |
+| lymphedema compression sleeve class 1 | $2–$5 | 300–900 | ⭐⭐⭐ |
+| lymphedema compression gauntlet | $1–$3 | 150–500 | ⭐⭐ |
+| compression camisole with pocket | $1–$3 | 100–300 | ⭐⭐ |
+| high compression sports bra recovery | $1–$3 | 100–250 | ⭐⭐ |
+| breast surgery recovery compression wear | $2–$4 | 200–600 | ⭐⭐⭐ |
+| insurance coverage compression garments | $2–$5 | 150–450 | ⭐⭐ |
+| buy lymphedema sleeve online | $1–$3 | 400–1,000 | ⭐⭐ |
+
+### Compression Negative Keywords
+
+- men
+- bodybuilding
+- waist trainer
+- shapewear only
+- halloween costume
+- cosplay

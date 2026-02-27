@@ -361,3 +361,55 @@
 2. **Month 2:** Kill underperforming keywords/ads. Scale winners by 20%.
 3. **Month 3:** Add lookalike audiences on Facebook. Test Shopping ads on Google.
 4. **Ongoing:** Review weekly. Adjust bids, budgets, and creative monthly.
+
+## Compression Line - Ad Copy Variants (New)
+
+### Variant 1 - Post-Surgery Essentials
+
+**Headlines:**
+- Post-Surgical Compression Bras
+- Recovery Support That Feels Gentle
+- Trusted Fit Guidance from Randi
+
+**Description:**
+Shop compression bras, vests, and camisoles made for healing comfort after breast surgery. Compassionate support and easy online ordering.
+
+### Variant 2 - Lymphedema Focus
+
+**Headlines:**
+- Lymphedema Sleeves Class 1
+- Compression Gauntlets Available
+- Feel Supported Every Day
+
+**Description:**
+Find breathable compression sleeves and gauntlets designed for daily lymphedema support. Get help choosing the right fit and level.
+
+### Variant 3 - Insurance Angle
+
+**Headlines:**
+- Compression Garments May Be Covered
+- Recovery Wear After Breast Cancer
+- Shop with Claim-Ready Receipts
+
+**Description:**
+Explore post-op compression options and lymphedema garments with detailed receipts to help with reimbursement and insurance claims.
+
+### Variant 4 - Active Recovery
+
+**Headlines:**
+- High-Compression Sports Bra Recovery
+- Move with Confidence Again
+- Built for Post-Recovery Support
+
+**Description:**
+Return to movement with secure, breathable compression support designed for post-recovery activity and comfort.
+
+### Variant 5 - Full Compression Collection
+
+**Headlines:**
+- New Compression Garment Collection
+- Bras, Vests, Sleeves and Camisoles
+- Expert Help from a Certified Fitter
+
+**Description:**
+Shop the full compression line at Restored by Randi and get personalized recommendations for surgery recovery and lymphedema support.
