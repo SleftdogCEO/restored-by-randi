@@ -1,0 +1,4 @@
+import CTA from '@/components/CTA';
+export default function WestPalmBeachPage() {
+  return <section><h1 className="text-4xl font-bold md:text-5xl">West Palm Beach fitting experience</h1><p className="mt-4 max-w-3xl">Serving women across West Palm Beach with private fittings, premium products, and personalized aftercare support.</p><div className="mt-8 rounded-2xl border border-rose/10 p-6"><h2 className="text-2xl font-semibold">Why local women choose Restored by Randi</h2><ul className="mt-4 list-disc space-y-2 pl-5 text-gray-700"><li>Board-certified expertise and discreet appointments</li><li>Product options matched to body type and activity</li><li>Insurance-first guidance from start to finish</li></ul></div><CTA title="Book your private fitting" body="Call 610-721-2794 to reserve your preferred time in West Palm Beach." /></section>;
+}

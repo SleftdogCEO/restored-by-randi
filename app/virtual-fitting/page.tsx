@@ -1,0 +1,4 @@
+import CTA from '@/components/CTA';
+export default function VirtualFittingPage() {
+  return <section><h1 className="text-4xl font-bold md:text-5xl">Virtual fitting</h1><p className="mt-4 max-w-3xl">Meet privately with a certified fitter from home. We guide sizing, product selection, and insurance preparation in a calm one-on-one session.</p><div className="mt-8 rounded-2xl border border-rose/10 p-6"><h2 className="text-2xl font-semibold">How it works</h2><ol className="mt-4 list-decimal space-y-2 pl-5 text-gray-700"><li>Call 610-721-2794 to schedule.</li><li>Share your goals, surgery timeline, and questions.</li><li>Get personalized recommendations and next steps.</li></ol></div><CTA title="Ready when you are" body="Appointments are private, supportive, and designed to make decisions feel easy." /></section>;
+}

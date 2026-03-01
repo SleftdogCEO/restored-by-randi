@@ -1,42 +1,60 @@
-# Restored by Randi — Project Tracker
+# Restored by Randi - Next.js + Tailwind Redesign
 
-**Repo:** https://github.com/SleftdogCEO/restored-by-randi (private)
-**Live:** https://restored-by-randi.vercel.app
-**Chat ID:** -5230863781
+Modernized website rebuilt on a reusable component architecture with static export compatibility for GitHub Pages.
 
----
+## Stack
 
-## Status: Research Phase
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Markdown blog content model (`content/blog-posts/*.md`)
+- Static export (`output: 'export'`) for GitHub Pages
 
-### Major Suppliers Identified
+## Included pages
 
-| Supplier | Products | Retailer Program |
-|----------|----------|------------------|
-| **Amoena** | Breast forms, mastectomy bras, swimwear, lymph care | B2B Portal available |
-| **Trulife** | Breast forms, bras, partial prosthetics | Distributor/retailer program |
-| **American Breast Care (ABC)** | Forms, bras, accessories | TBD |
-| **Nearly Me** | Forms, bras | TBD |
+- Home (`/`)
+- Shop categories (`/shop`, `/shop/bras`, `/shop/prosthesis`, `/shop/compression`)
+- Virtual fitting (`/virtual-fitting`)
+- Insurance guide (`/insurance-guide`)
+- West Palm Beach page (`/west-palm-beach`)
+- Blog index + post template (`/blog`, `/blog/[slug]`)
 
-### Product Categories to Stock
-1. **Breast Forms** — silicone, lightweight, swim/leisure
-2. **Mastectomy Bras** — pocketed, front-closure, sports
-3. **Post-Surgery** — compression, recovery wear
-4. **Swimwear** — pocketed swimsuits, bikinis
-5. **Accessories** — form covers, extenders, adhesives
+## SEO + URL preservation
 
-### Next Steps
-- [ ] Contact Amoena B2B for wholesale/dropship terms
-- [ ] Contact Trulife distributor program
-- [ ] Research ABC and Nearly Me retailer programs
-- [ ] Shopify store setup checklist
-- [ ] Content calendar for Randi
+- App-level metadata and OG defaults in `app/layout.tsx`
+- Article metadata for blog posts
+- Basic schema (`MedicalBusiness` on home, `Article` on blog posts)
+- `app/sitemap.ts` and `app/robots.ts`
+- Legacy URL support:
+  - Equivalent routes under `/pages/*`
+  - Generated legacy `.html` redirect files in `public/blog/*.html` and `public/pages/*.html`
 
----
+## Contact updates
 
-## Daily Updates
+Primary contact phone has been standardized in the new app to:
 
-### 2026-02-10 (11:30 PM)
-- Created project folder
-- Identified 4 major suppliers (Amoena, Trulife, ABC, Nearly Me)
-- Amoena has B2B portal; Trulife has distributor program
-- Next: Draft supplier outreach emails, research Shopify setup
+**610-721-2794**
+
+## Development
+
+```bash
+npm install
+npm run legacy:redirects
+npm run dev
+```
+
+Open http://localhost:3000
+
+## Build / export
+
+```bash
+npm run legacy:redirects
+npm run build
+```
+
+Next.js static output is generated in `out/` and is compatible with GitHub Pages.
+
+## Deploy notes (GitHub Pages)
+
+- Commit `public/CNAME` and `public/.nojekyll`
+- Publish the built `out/` directory through your Pages workflow
+- If using custom domain, confirm DNS still points to GitHub Pages

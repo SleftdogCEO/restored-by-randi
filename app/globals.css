@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+body { @apply bg-white text-ink antialiased; }
+
+h1,h2,h3,h4 { @apply text-plum tracking-tight; }
+p { @apply text-gray-700 leading-relaxed; }
+
+.prose-custom h2 { @apply text-2xl font-semibold mt-10 mb-4; }
+.prose-custom h3 { @apply text-xl font-semibold mt-8 mb-3; }
+.prose-custom p { @apply mb-4; }
+.prose-custom ul { @apply list-disc pl-6 mb-5 space-y-2; }
+.prose-custom a { @apply text-rose underline; }
